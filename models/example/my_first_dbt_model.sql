@@ -7,8 +7,7 @@
 */
 
 
-select CustomerID, Gender, Age, annual_income, spending_score
-from {{ source('source', 'customers') }}
+select CustomerID, Gender, Age, annual_income, spending_score from {{ source('source', 'customers') }}
 
 
 
