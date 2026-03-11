@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: source # e.g., raw_data
+  - name: customer_data # e.g., raw_data
     catalog: workspace # Omit if not using Unity Catalog
     schema: test_dbt # e.g., default
     tables:
