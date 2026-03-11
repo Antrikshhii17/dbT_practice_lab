@@ -6,19 +6,14 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
 
-with source_data as (
+select CustomerID, Gender, Age, annual_income, spending_score
+from {{ source('source', 'customers') }}
 
-    select * from current_schema()."customers"
 
-)
-
-select *
-from source_data
 
 /*
     Uncomment the line below to remove records with null `id` values
 */
 
-where id is not null
+where CustomerID is not null
