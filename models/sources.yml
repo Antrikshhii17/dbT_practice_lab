@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: customer_data # e.g., raw_data
+    catalog: workspace # Omit if not using Unity Catalog
+    schema: test_dbt # e.g., default
+    tables:
+      - name: customers # The actual table name in Databricks, e.g., customers
