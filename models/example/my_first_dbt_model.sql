@@ -9,15 +9,10 @@
 
 select 
     CustomerID, 
-    Gender, Age, 
+    Gender, 
+    Age, 
     annual_income, 
     spending_score 
 from {{ source('customer_data', 'customers') }}
-
-
-
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
 
 where CustomerID is not null
