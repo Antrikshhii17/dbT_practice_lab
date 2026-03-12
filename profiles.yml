@@ -1,0 +1,13 @@
+test_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: "dbc-cc0c362b-4b2a.cloud.databricks.com"
+      http_path: "/sql/1.0/warehouses/5928880162688c9e"
+      schema: test_dbt
+      catalog: workspace
+      token: "{{ env_var('DBT_ENV_SECRET_') }}"
+      threads: 3
+      connect_timeout: 60
+      connect_retries: 3
